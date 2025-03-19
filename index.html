@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple E-Commerce</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <h1>ShopMaster</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#cart" id="cart-link">Cart (0)</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Banner Section -->
+  <section id="home" class="banner">
+    <div class="banner-text">
+      <h2>Shop the Best Deals Online</h2>
+      <p>Find your perfect product today!</p>
+      <button>Start Shopping</button>
+    </div>
+  </section>
+
+  <!-- Search & Sort Section -->
+  <section id="search-sort">
+    <input type="text" id="search-box" placeholder="Search products..." oninput="searchProducts()">
+    <select id="sort-options" onchange="sortProducts()">
+      <option value="name-asc">Name (A-Z)</option>
+      <option value="name-desc">Name (Z-A)</option>
+      <option value="price-asc">Price (Low to High)</option>
+      <option value="price-desc">Price (High to Low)</option>
+    </select>
+  </section>
+
+  <!-- Product Listings -->
+  <section id="products">
+    <h2>Our Products</h2>
+    <div class="product-grid" id="product-grid">
+      <!-- Products will be dynamically loaded by JavaScript -->
+    </div>
+  </section>
+
+  <!-- Cart Section -->
+  <section id="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="cart-total">0.00</span></p>
+    <button onclick="checkout()">Checkout</button>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@shopmaster.com</p>
+    <p>Phone: +123 456 789</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ShopMaster. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
